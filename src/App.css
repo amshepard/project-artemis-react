@@ -1,11 +1,15 @@
 .App {
   text-align: center;
   overflow: hidden; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
 }
 
+
 .App-logo {
-  width: 100vw; 
-  height: 100vh; 
+  width: 60vw; 
+  height: 75vh; 
   pointer-events: none;
 }
 
@@ -20,6 +24,28 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Custom-link {
+  font-family: 'Bangers', sans-serif; 
+  color: #ff69b4;
+  text-decoration: none; 
+  transition: color 0.3s; 
 }
+
+.Custom-link:hover {
+  color: #f3ff00;
+}
+
+.Logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Paragraph {
+  width: 100%; 
+  max-width: 100%; 
+  text-align: center;
+  font-size: 16px; 
+  margin-top: 20px;
+}
+
