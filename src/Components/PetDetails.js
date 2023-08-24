@@ -2,17 +2,17 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 
-function SongDetails() {
-  const [song, setSong] = useState({});
+function PetDetails() {
+  const [pet, setPet] = useState({});
   let { id } = useParams();
   let navigate = useNavigate();
   const API = process.env.REACT_APP_API_URL;
 
-  const deleteSong = () => {
+  const deletePet = () => {
     axios
-      .delete(`${API}/songs/${id}`)
+      .delete(`${API}/pets/${id}`)
       .then(
-        () => navigate(`/songs`),
+        () => navigate(`/pets`),
         (error) => console.error(error)
       )
       .catch((c) => console.warn("catch", c));
@@ -20,9 +20,9 @@ function SongDetails() {
 
   useEffect(() => {
     axios
-      .get(`${API}/songs/${id}`)
+      .get(`${API}/pets/${id}`)
       .then((response) => {
-        setSong(response.data);
+        setPet(response.data);
       })
       .catch((c) => {
         console.warn("catch", c);
@@ -32,36 +32,35 @@ function SongDetails() {
 
   return (
     <>
-      <article className="container Song-Details">
-        <h3>
-          {song.is_favorite ? <span>⭐️</span> : null} {song.name} - By{" "}
-          {song.artist}
-        </h3>
-        <h5>{song.album}</h5>
+      <article className="container Pet-Details">
+        <h5>{pet.breed}</h5>
         <h6>
-          <span>Time: </span>
-          {song.time}
+          <span>Type: </span>
+          {pet.type}
+        </h6>
+        <h6>
+          <span>City: </span>
+          {pet.city}
         </h6>
       </article>
       <div className="showNavigation">
         <div>
           <button>
-            <Link to={`/songs`}>Back</Link>
+            <Link to={`/pets`}>Back</Link>
           </button>
         </div>
 
         <div>
           <button>
-            <Link to={`/songs/${id}/edit`}>Edit</Link>
+            <Link to={`/pets/${id}/edit`}>Edit</Link>
           </button>
         </div>
         <div>
-          {" "}
-          <button onClick={deleteSong}>Delete</button>
+          <button onClick={deletePet}>Delete</button>
         </div>
       </div>
     </>
   );
 }
 
-export default SongDetails;
+export default PetDetails;
