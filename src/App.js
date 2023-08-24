@@ -27,7 +27,7 @@
 // export default App;
 
 
-import logo from './artemis.jpg';
+import logo from './arty.gif';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
