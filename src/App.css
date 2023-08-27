@@ -1,51 +1,43 @@
 .App {
-  text-align: center;
-  overflow: hidden; 
-  display: flex; 
-  justify-content: center;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
-
-.App-logo {
-  width: 60vw; 
-  height: 75vh; 
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Nav-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-end;
+  justify-content: flex-start;
+  background-color: #282c34;
   color: white;
+  padding: 20px;
 }
 
-.Custom-link {
-  font-family: 'Bangers', sans-serif; 
-  color: #ff69b4;
-  text-decoration: none; 
-  transition: color 0.3s; 
+.Nav-link {
+  font-family: 'Bangers', sans-serif;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+  margin-bottom: 10px;
 }
 
-.Custom-link:hover {
+.Nav-link:hover {
   color: #f3ff00;
 }
 
-.Logo-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.landingPageVideo {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
 }
-
-.Paragraph {
-  width: 100%; 
-  max-width: 100%; 
-  text-align: center;
-  font-size: 16px; 
-  margin-top: 20px;
-}
-

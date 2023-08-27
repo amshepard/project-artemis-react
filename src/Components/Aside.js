@@ -1,7 +1,7 @@
 export default function Aside() {
   return (
     <aside>
-      <p>aside</p>
+      <p>Add Pet</p>
     </aside>
   );
 }
