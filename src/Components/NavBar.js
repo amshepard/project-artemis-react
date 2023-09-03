@@ -4,7 +4,7 @@ export default function NavBar() {
   return (
     <nav>
       <h1>
-        <NavLink to="/pets">The Artemis Project</NavLink>
+        <NavLink to="/pets">Find Your Lost Pet</NavLink>
       </h1>
     </nav>
   );

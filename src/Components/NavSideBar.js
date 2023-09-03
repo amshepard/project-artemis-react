@@ -1,7 +1,10 @@
+import { Link } from "react-router-dom";
+
+
 export default function NavSidebar() {
   return (
     <nav>
-      <p>Nav Side Bar</p>
+      <Link to="/pets/new">Report A Pet</Link>
     </nav>
   );
 }
